@@ -17,18 +17,7 @@ public class Board {
         this.row = blocks.length;
         
         this.board = blocks;
-        int N = row*row;
-       
-//        this.goalboard = new int[row][row];
-//        
-//        for (int x = 0; x < row;x++){
-//            for (int y =0; y< row;y++){
-//                goalboard[x][y] = counter+1;
-//                counter++;
-//            }
-//        }
-//        goalboard[last][last] = 0;
-        
+        int N = row*row;       
         cacheManhattan();
        
     }
@@ -55,7 +44,6 @@ public class Board {
     public boolean isGoal(){
         
         if (hamming() ==0){
-        // if (this.equals(goal) && hamming()==0){
             return true;
         }
         return false;
@@ -225,7 +213,6 @@ public class Board {
     }
     
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         int[][] blocks = new int[3][3];
         blocks[0][0] = 0;
         blocks[0][1] = 1;
@@ -237,7 +224,6 @@ public class Board {
         blocks[2][1] = 8;
         blocks[2][2] = 6;
         Board b = new Board(blocks);
-//        System.out.println("twin: \n" + b.twin());
         System.out.println("origin board: \n" + b.toString());
         System.out.println("Hamming: " + b.hamming());
         System.out.println("Manhattan: " + b.manhattan());

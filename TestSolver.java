@@ -20,8 +20,6 @@ public class TestSolver {
             StdOut.println("No solution possible");
         else {
             StdOut.println("Minimum number of moves = " + solver.moves());
-//            for (Board board : solver.solution())
-//                StdOut.println(board);
         }
     }
 
